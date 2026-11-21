@@ -1,16 +1,46 @@
-# React + Vite
+# Campus Venue and Facility Reservation System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+The CICS Campus Reservation System is a web-based application designed to manage campus facility reservations. It allows users to view available facilities, submit reservation requests, and monitor their reservation status. Administrators can manage facilities, review reservation requests, and approve or reject reservations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
 
-## React Compiler
+- React.js
+- Vite
+- Node.js
+- Express.js
+- MySQL
+- CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- User registration and login
+- User profile management
+- Facility browsing
+- Facility reservation requests
+- Reservation status tracking
+- Admin dashboard
+- Facility management
+- Reservation approval and rejection
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Members
+
+- Bandoles, Mark Florence G.
+- Venales, Justin M.
+- Jamsani, Hajar A.
+- Coligado, Cristian C.
+- Ramos, Joem Ryan
+- Gonzales, Christian
+
+## Database
+
+Database name: `zppsu_reservation`
+
+## Installation and Setup
+
+1. Clone this repository.
+2. Install dependencies using `npm install`.
+3. Configure your MySQL database.
+4. Start the backend server.
+5. Start the React development server.
