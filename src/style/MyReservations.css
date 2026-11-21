@@ -1,0 +1,324 @@
+
+.my-reservations {
+    padding: 25px;
+    width: 100%;
+}
+
+.my-reservations h2 {
+    font-size: 26px;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.my-reservations > p {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+.my-reservations-table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.my-reservations-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.my-reservations-table th,
+.my-reservations-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.my-reservations-table th {
+    background: #f8fafc;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.my-reservations-table td {
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.my-reservations-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.my-reservation-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.my-reservation-status.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.my-reservation-status.approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.my-reservation-status.rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.my-reservation-status.cancelled {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+
+.cancel-reservation-btn {
+    background: #dc2626;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cancel-reservation-btn:hover {
+    background: #b91c1c;
+}
+
+.cancel-reservation-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+
+/* Reservation Details Modal */
+.reservation-details-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.reservation-details-modal {
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.reservation-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.reservation-details-header h2 {
+    margin: 0;
+    font-size: 21px;
+    color: #1f2937;
+}
+
+.close-details-btn {
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.reservation-details-body {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.details-item label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 7px;
+}
+
+.details-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #1f2937;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.reservation-details-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reservation-details-footer button {
+    background: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.reservation-details-footer button:hover {
+    background: #1e40af;
+}
+
+.user-view-reservation-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.user-view-reservation-btn:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+    .reservation-details-body {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .reservation-details-modal {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+/* My Reservations Notification */
+.my-reservations-notification {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 9999;
+    min-width: 280px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: myReservationsNotificationSlideIn 0.3s ease;
+}
+
+.my-reservations-notification.success {
+    background-color: #28a745;
+}
+
+.my-reservations-notification.error {
+    background-color: #dc3545;
+}
+
+@keyframes myReservationsNotificationSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* My Reservations Cancel Confirmation Modal */
+.my-cancel-confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+    padding: 20px;
+}
+
+.my-cancel-confirm-modal {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.my-cancel-confirm-modal h2 {
+    color: #800000;
+    margin-bottom: 15px;
+}
+
+.my-cancel-confirm-modal p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.my-cancel-confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.my-cancel-no-btn,
+.my-cancel-yes-btn {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.my-cancel-no-btn {
+    background: #e5e5e5;
+    color: #333;
+}
+
+.my-cancel-yes-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.my-cancel-no-btn:hover {
+    background: #d5d5d5;
+}
+
+.my-cancel-yes-btn:hover {
+    background: #bd2130;
+}

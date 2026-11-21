@@ -1,0 +1,205 @@
+.pending-applications {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.pending-applications h2 {
+    color: #800000;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.pending-user {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.pending-user-info {
+    flex: 1;
+}
+
+.pending-user-id {
+    flex: 0 0 250px;
+}
+
+.pending-user h3 {
+    color: #800000;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.pending-user p {
+    color: #555555;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.pending-user-id img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 15px;
+    border: 2px solid #800000;
+    border-radius: 8px;
+}
+
+.application-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.application-actions button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.application-actions button:first-child {
+    background-color: #800000;
+    color: white;
+}
+
+.application-actions button:first-child:hover {
+    background-color: #a00000;
+}
+
+.application-actions button:last-child {
+    background-color: #dc3545;
+    color: white;
+}
+
+.application-actions button:last-child:hover {
+    background-color: #b02a37;
+}
+
+.pending-applications > p {
+    color: #777777;
+    font-size: 15px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #eeeeee;
+    max-width: 700px;
+}
+
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.confirmation-modal {
+    background: #ffffff;
+    width: 350px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-modal h3 {
+    color: #800000;
+    margin-bottom: 12px;
+}
+
+.confirmation-modal p {
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.confirmation-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.confirmation-actions button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.confirmation-actions button:first-child {
+    background: #eeeeee;
+    color: #333333;
+}
+
+.confirmation-actions button:last-child {
+    background: #800000;
+    color: #ffffff;
+}
+
+.confirmation-actions button:last-child:hover {
+    background: #a00000;
+}
+
+.notification-popup {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+    text-align: center;
+}
+
+.notification-popup p {
+    margin-bottom: 15px;
+    color: #333333;
+    font-size: 15px;
+}
+
+.notification-popup.success {
+    border-top: 5px solid #198754;
+}
+
+.notification-popup.error {
+    border-top: 5px solid #dc3545;
+}
+
+.notification-popup button {
+    padding: 9px 25px;
+    background: #800000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.notification-popup button:hover {
+    background: #a00000;
+}

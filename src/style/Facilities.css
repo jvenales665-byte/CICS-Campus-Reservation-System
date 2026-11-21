@@ -1,0 +1,305 @@
+.facilities-container {
+    padding: 30px;
+    width: 100%;
+}
+
+.facilities-container h1 {
+    color: #800000;
+    margin-bottom: 10px;
+}
+
+.facilities-container p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.add-facility-btn {
+    background-color: #800000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.add-facility-btn:hover {
+    background-color: #600000;
+}
+
+.facility-form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-top: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.facility-form h2 {
+    color: #800000;
+    margin-bottom: 20px;
+}
+
+.facility-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.facility-form-group label {
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.facility-form-group input,
+.facility-form-group textarea {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.facility-form-group input:focus,
+.facility-form-group textarea:focus {
+    border-color: #800000;
+}
+
+.facility-form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.save-facility-btn {
+    background-color: #800000;
+    color: white;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.save-facility-btn:hover {
+    background-color: #600000;
+}
+
+.cancel-facility-btn {
+    background-color: #e5e5e5;
+    color: #333;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cancel-facility-btn:hover {
+    background-color: #ccc;
+}
+
+.facility-form-group small {
+    color: #888;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.facilities-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.facility-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.facility-card h3 {
+    color: #800000;
+    font-size: 18px;
+    margin: 18px 18px 12px;
+}
+
+.facility-card p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 18px 12px;
+}
+
+@media (max-width: 1000px) {
+    .facilities-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .facilities-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.profile-notification {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 9999;
+    padding: 15px 22px;
+    min-width: 280px;
+    max-width: 400px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    animation: slideInNotification 0.3s ease;
+}
+
+.profile-notification.success {
+    background-color: #16a34a;
+}
+
+.profile-notification.error {
+    background-color: #dc2626;
+}
+
+@keyframes slideInNotification {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.edit-facility-btn {
+    background-color: #800000;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 18px 18px;
+}
+
+.edit-facility-btn:hover {
+    background-color: #600000;
+}
+
+.delete-facility-btn {
+    background-color: #dc2626;
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 18px;
+}
+
+.delete-facility-btn:hover {
+    background-color: #b91c1c;
+}
+
+.delete-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.delete-modal {
+    background: white;
+    padding: 30px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.delete-modal h2 {
+    color: #800000;
+    margin-bottom: 15px;
+}
+
+.delete-modal p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.delete-modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cancel-delete-btn,
+.confirm-delete-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cancel-delete-btn {
+    background: #e5e5e5;
+    color: #333;
+}
+
+.confirm-delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.cancel-delete-btn:hover {
+    background: #d4d4d4;
+}
+
+.confirm-delete-btn:hover {
+    background: #b91c1c;
+}
+
+.confirm-delete-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+    opacity: 0.7;
+}

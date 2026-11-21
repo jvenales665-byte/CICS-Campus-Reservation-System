@@ -1,0 +1,112 @@
+
+/* INFORMATION SECTIONS */
+.profile-information {
+    margin-top: 30px;
+}
+
+.profile-section-heading {
+    margin: 28px 0 15px;
+}
+
+.profile-section-heading h2 {
+    color: #800000;
+    font-size: 19px;
+    margin: 0 0 7px;
+}
+
+.profile-section-heading p {
+    color: #888;
+    font-size: 13px;
+    margin: 0;
+}
+
+.profile-information-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.profile-information-card label {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.profile-information-card p {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* EDIT PROFILE INPUTS */
+.profile-information-card input,
+.profile-information-card select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+}
+
+.profile-information-card input:focus,
+.profile-information-card select:focus {
+    border-color: #800000;
+}
+
+/* EDIT AND SAVE BUTTONS */
+.edit-profile-button,
+.save-profile-button,
+.cancel-profile-button {
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.edit-profile-button,
+.save-profile-button {
+    background: #800000;
+    color: white;
+}
+
+.edit-profile-button:hover,
+.save-profile-button:hover {
+    background: #600000;
+}
+
+.cancel-profile-button {
+    background: #eeeeee;
+    color: #555;
+}
+
+.cancel-profile-button:hover {
+    background: #dddddd;
+}
+
+.profile-edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.profile-section-heading .edit-profile-button {
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .profile-information-card {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,28 @@
+
+/* PASSWORD INPUT */
+.password-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.password-input-wrapper input {
+    width: 100%;
+    padding-right: 65px;
+}
+
+.password-input-wrapper button {
+    position: absolute;
+    right: 12px;
+    border: none;
+    background: transparent;
+    color: #555;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.password-input-wrapper button:hover {
+    color: #1d4ed8;
+}
